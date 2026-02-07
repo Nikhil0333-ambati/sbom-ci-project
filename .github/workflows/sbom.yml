@@ -12,9 +12,9 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Install Syft
-      run: |
-        curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh
+    - - name: Install Syft
+        uses: anchore/sbom-action/download-syft@v0
+
 
     - name: Generate SBOM
       run: |
