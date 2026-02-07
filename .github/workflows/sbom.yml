@@ -32,7 +32,7 @@ jobs:
         cosign sign-blob --key cosign.key sbom.json > sbom.sig
 
     - name: Upload SBOM Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: SBOM-Files
         path: |
